@@ -20,13 +20,11 @@ each element of array A is an integer within the range [−1,000,000..1,000,000]
 def solution(A):
     arr = [0] * (len(A) + 1)
     A.sort()
+    
     for a in A:
-        print(f'1st for:{a}')
         if a > 0:
             arr.insert(a, 1)
-    print(A)
-    print(arr[:len(A) + 1])
+
     for i in range(1, (len(A) + 1)):
-        print(f'2nd for:{i}, arr[i]{arr[i]}')
         if arr[i] == 0:
             return i
